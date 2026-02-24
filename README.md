@@ -1,28 +1,52 @@
-# 🎵 Music Player Web
+# 🎧 Music Player Web
 
-Um player de música simples inspirado no visual do Spotify, desenvolvido com **HTML, CSS e JavaScript puro**.
-O projeto permite reproduzir músicas, pausar, avançar, voltar faixas e visualizar informações da música atual.
+![HTML5](https://img.shields.io/badge/HTML5-structure-orange)
+![CSS3](https://img.shields.io/badge/CSS3-style-blue)
+![JavaScript](https://img.shields.io/badge/JavaScript-logic-yellow)
+![Status](https://img.shields.io/badge/status-em%20desenvolvimento-green)
+
+Um **player de música web inspirado no Spotify**, desenvolvido com HTML, CSS e JavaScript puro.
+O projeto simula as principais funcionalidades de um player moderno, com foco em **manipulação do DOM**, **controle de áudio** e **experiência visual**.
+
+---
+
+## ✨ Preview
+
+> Interface clean com capa do álbum, controles de reprodução e navegação entre músicas.
 
 ---
 
 ## 🚀 Funcionalidades
 
-* ▶️ Reproduzir música
-* ⏸️ Pausar música
-* ⏭️ Próxima faixa
-* ⏮️ Faixa anterior
-* ❤️ Botão de curtir
-* 🖼️ Exibição de capa do álbum
-* 📊 Barra de progresso (em desenvolvimento)
-* 🎨 Interface inspirada no Spotify
+✔️ Reproduzir música
+✔️ Pausar música
+✔️ Próxima faixa
+✔️ Faixa anterior
+✔️ Alternância dinâmica do botão play/pause
+✔️ Exibição de capa do álbum
+✔️ Exibição do nome da música e artista
+✔️ Layout inspirado no Spotify
 
 ---
 
-## 🛠️ Tecnologias utilizadas
+## 🧠 Conceitos praticados
+
+Este projeto foi desenvolvido para treinar:
+
+* Manipulação do DOM
+* Controle de áudio com JavaScript
+* Gerenciamento de estado (isPlaying)
+* Estrutura de playlist em array
+* Template strings
+* Organização de layout com Flexbox
+
+---
+
+## 🛠️ Tecnologias
 
 * HTML5
 * CSS3
-* JavaScript (Vanilla)
+* JavaScript (Vanilla JS)
 * Bootstrap Icons
 
 ---
@@ -40,53 +64,60 @@ O projeto permite reproduzir músicas, pausar, avançar, voltar faixas e visuali
 
 ---
 
-## ▶️ Como executar
-
-1. Clone este repositório:
+## ▶️ Como executar localmente
 
 ```bash
-git clone https://github.com/seu-usuario/seu-repo.git
+# clonar o repositório
+git clone https://github.com/seu-usuario/seu-repositorio.git
+
+# entrar na pasta
+cd music-player
 ```
 
-2. Abra a pasta do projeto
+Depois, basta abrir:
 
-3. Execute o arquivo:
-
-```bash
+```
 index.html
 ```
 
 ---
 
-## 🎯 Próximas melhorias
+## 🔮 Próximas melhorias
 
-* [ ] Barra de progresso funcional
+* [ ] Barra de progresso dinâmica
 * [ ] Controle de volume
 * [ ] Modo shuffle funcional
+* [ ] Modo repeat funcional
 * [ ] Responsividade mobile
-* [ ] Animações estilo Spotify
-* [ ] Playlist dinâmica
+* [ ] Animações mais suaves
+* [ ] Playlist dinâmica via JSON
 
 ---
 
-## 💡 Aprendizados
+## 📚 Possíveis evoluções (nível avançado)
 
-Este projeto foi desenvolvido para praticar:
-
-* Manipulação do DOM
-* Controle de áudio com JavaScript
-* Organização de playlist
-* Alternância de estados (play/pause)
-* Estruturação de interface web
+* 🔹 Salvar música curtida no localStorage
+* 🔹 Player com React
+* 🔹 Integração com API de músicas
+* 🔹 Tema dark/light
+* 🔹 Waveform do áudio
 
 ---
 
 ## 👩‍💻 Autora
 
-Desenvolvido por **Larissa Fossato** 💙
-Apaixonada por tecnologia e cibersegurança.
+**Larissa Fossato**
+Estudante de tecnologia e entusiasta de cibersegurança 💙
 
 ---
 
-⭐ Se você gostou do projeto, deixe uma estrela no repositório!
+## ⭐ Apoie o projeto
 
+Se este projeto te ajudou ou você achou interessante:
+
+👉 Deixe uma ⭐ no repositório
+👉 Compartilhe com outros devs
+
+---
+
+> Projeto educacional para prática de JavaScript e manipulação de áudio na web.
