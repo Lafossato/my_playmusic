@@ -8,6 +8,9 @@ const previous = document.getElementById('previous');
 const currentProgress = document.getElementById('current-progress');
 const progressContainer = document.getElementById('progress-bar');
 const shuffleButton = document.getElementById('shuffle');
+const repeatButton = document.getElementById('repeat');
+const songTime = document.getElementById('song-time');
+const totalTime = document.getElementById('total-time');
 
 const thatsWhatILike = {
     songName: 'Thats What I Like',
@@ -29,6 +32,7 @@ const iWantItThatWay = {
 
 let isPlaying = false;
 let isShuffled = false;
+let repeatOn = false;
 const originalPlaylist = [thatsWhatILike, saveYourTears, iWantItThatWay];
 let sortedPlaylist = [...originalPlaylist];
 let index = 0;
@@ -85,6 +89,7 @@ function nextSong(){
 function updateProgressBar(){
     const barWidth = (song.currentTime / song.duration) * 100;
     currentProgress.style.width = `${barWidth}%`;
+    songTime.innerText = toHHMMSS(song.currentTime);
 }
 
 function jumpTo(event){
@@ -120,11 +125,50 @@ function shuffleButtonClicked(){
     }
 }
 
+function repeatButtonClicked(){
+    if(repeatOn === false){
+        repeatOn = true;
+        repeatButton.classList.add('button-active');
+    }
+    else {
+        repeatOn = true;
+        repeatButton.classList.remove('button-active');
+    }
+}
+
+function nextOrRepeat() {
+    if (repeatOn === false) {
+        nextOrRepeat();
+    }
+    else{
+        playSong();
+    }
+}
+
+function toHHMMSS(seconds) {
+    if (isNaN(seconds)) return "00:00";
+
+    const min = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60);
+
+    const formattedMin = String(min).padStart(2, '0');
+    const formattedSecs = String(secs).padStart(2, '0');
+
+    return `${formattedMin}:${formattedSecs}`;
+}
+
+function updateTotalTime() {
+    totalTime.innerText = toHHMMSS(song.duration);
+}
+
 initializeSong();
 
 play.addEventListener('click', playPauseDecider);
 previous.addEventListener('click', previousSong);
 next.addEventListener('click', nextSong);
 song.addEventListener('timeupdate', updateProgressBar);
+song.addEventListener('ended', nextOrRepeat);
+song.addEventListener('loadedmetadata', updateTotalTime);
 progressContainer.addEventListener('click', jumpTo);
 shuffleButton.addEventListener('click', shuffleButtonClicked)
+repeatButton.addEventListener('click', repeatButtonClicked)
